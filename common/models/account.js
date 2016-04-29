@@ -5,12 +5,11 @@ module.exports = function(Account) {
   console.log('Account module');
   //send verification email after registration
   Account.afterRemote('create', function(context, userInstance, next) {
-    console.log('> user.afterRemote triggered');
 
     var options = {
       type: 'email',
       to: userInstance.email,
-      from: 'williamtse0121@gmail.com',
+      from: 'elenghost@163.com',
       subject: 'Thanks for registering.',
       template: path.resolve(__dirname, '../../server/views/verify.ejs'),
       redirect: '/verified',
@@ -18,8 +17,9 @@ module.exports = function(Account) {
     };
 
     userInstance.verify(options, function(err, response, next) {
-      if (err)
-        return next(err);
+      console.log('> user.afterRemote triggered'+ err);
+      // if (err)
+      //   return next(err);
 
       console.log('> verification email sent:', response);
 

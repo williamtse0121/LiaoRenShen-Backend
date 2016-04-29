@@ -3,22 +3,22 @@
     "name": "db",
     "connector": "memory"
   },
-  "Email": {
-    "name": "mail",
-    "defaultForType": "mail",
+  "EmailDataSource": {
+    "name": "EmailDataSource",
     "connector": "mail",
-    "transports": [
-      {
-        "type": "SMTP",
-        "host": "smtp.gmail.com",
-        "secure": true,
-        "port": 465,
-        "auth": {
-          "user": "williamtse0121@gmail.com",
-          "pass": "99059905"
-        }
+    "transports": [{
+      "type": "SMTP",
+      "host": "smtp.163.com",
+      "secure": false,
+      "port": 587,
+      "tls": {
+        "rejectUnauthorized": false
+      },
+      "auth": {
+        "user": "elenghost@163.com",
+        "pass": "99059905memo"
       }
-    ]
+    }]
   }
 
 }

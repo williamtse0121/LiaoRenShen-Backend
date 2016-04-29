@@ -29,6 +29,9 @@
     "dataSource": "db",
     "public": false
   },
+  "Email": {
+      "dataSource": "EmailDataSource"
+  },
   "Book": {
     "dataSource": "db",
     "public": true
